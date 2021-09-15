@@ -1,0 +1,60 @@
+<div class="page-title">
+    <h1 class="tracking-in-expand">Modifier profil</h1>
+    <hr class="col-9.5" style="color: blue; ">
+    
+</div>
+<form id="form" name="form" method="post" action="/sge/portal/myProfile.faces" enctype="multipart/form-data" >
+<input type="hidden" name="form" value="form" />
+
+<div id="messagesRegion" aria-label="form feedback" aria-live="assertive" aria-relevant="additions">
+<div id="form:messages">
+</div>
+</div>
+<div class="container" style="margin-left: 60px;">
+    <br>
+    <p   style="background-color:#B0E0E6; padding-left: 20px;"> Cher/Chère employe(s), <br> <br>
+
+        Afin de finaliser la création de votre fiche , vous prions de vérifier vos données et de 
+        faire les corrections <br>  nécessaires dans ce formulaire.
+        Une fois effectué, veuillez cliquer sur le bouton <strong>Enregistrer</strong> pour soumettre vos corrections. <br> <br>
+        
+        Nous vous remercions pour votre collaboration. </p>
+<div class="row">
+
+<div class="col-lg-9 col-md-12">
+    <h3 class="my-profile-section-h">Contact</h3>
+    <hr class="col-12" style="color: blue; ">
+    <dl class="row">
+        <dt class="col-sm-3">E-mail :</dt>
+        <dd class="col-sm-9"> <input  class="form-control form-control-user col-9" type="text" name="Email" id="Email"  placeholder="Email ..." [(ngModel)]="Email"></dd>
+        <dt class="col-sm-3">Téléphone :</dt>
+        <dd class="col-sm-9"><input  class="form-control form-control-user col-9" type="text" name="Phone" id="Phone"  placeholder="Phone ..." [(ngModel)]="Phone"></dd>
+        
+    </dl>
+    <h3 class="my-profile-section-h">Informations personnelles</h3>
+    <hr class="col-12" style="color: blue; ">
+    <dl class="row">
+        <dt class="col-sm-3">Nom :</dt>
+        <dd class="col-sm-9"><input  class="form-control form-control-user col-9" type="text" name="LoginUser" id="LoginUser"  placeholder="LoginUser ..." [(ngModel)]="LoginUser"></dd>
+        <dt class="col-sm-3">Identite :</dt>
+        <dd class="col-sm-9"><input  class="form-control form-control-user col-9" type="text" name="Identite" id="Identite"  placeholder="Identite ..." [(ngModel)]="Identite"></dd>
+        <dt class="col-sm-3">Adresse :</dt>
+        <dd class="col-sm-9"><input  class="form-control form-control-user col-9" type="text" name="Adresse" id="Adresse"  placeholder="Adresse ..." [(ngModel)]="Adresse"></dd>
+    </dl>
+    <h3 class="my-profile-section-h">Pièce d'identité</h3>
+    <hr class="col-12" style="color: blue; ">
+    <dl class="row">
+        <dt class="col-sm-3">Nationalité :</dt>
+        <dd class="col-sm-9"><input  class="form-control form-control-user col-9" type="text" name="Nationalite" id="Nationalite"  placeholder="Nationalite ..." [(ngModel)]="Nationalite"></dd>
+        <dt class="col-sm-3">Cin :</dt>
+        <dd class="col-sm-9"><input  class="form-control form-control-user col-9" type="text" name="Cin" id="Cin"  placeholder="Cin ..." [(ngModel)]="Cin"></dd>
+        <dd class="col-sm-9">
+        </dd>
+    </dl>
+</div>
+<div class="w-100"></div>
+
+</div>
+</div>
+</form>
+<button type="button" class="btn btn-success float-right" (click)="updateUser()" >Enregistrer</button>

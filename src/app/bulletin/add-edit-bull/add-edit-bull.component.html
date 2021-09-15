@@ -1,0 +1,54 @@
+
+
+<div class="form-group row">
+        <div class="row centered-form">
+        <div class="col-xl-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+			    		
+			 			</div>
+			 			<div class="panel-body">
+			    		<form class="form-group">
+			    			<div class="row">
+			    				
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+                                        <label >Matricule*</label>
+			    						<input type="text" name="Matricule" id="Matricule" class="form-control input-sm" placeholder="Matricule"
+                                        [(ngModel)]="Matricule">
+			    					</div>
+			    				</div>
+                                <div class="col-xs-15 col-sm-15 col-md-6">
+			    					<div class="form-group">
+                                        <label >Identite Malade*</label>
+			                            <input type="text" name="IdentiteMalade" id="IdentiteMalade" class="form-control input-sm" placeholder="Identite Malade"
+                                        [(ngModel)]="IdentiteMalade">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+                                        <label>Date de Soin*</label>
+										<input type="text"
+										class="form-control" bsDatepicker [bsConfig]="{containerClass: 'theme-dark-blue'}" placeholder="Date de soin"
+										[(ngModel)]="DateSoin">
+			    					</div>
+			    				</div>
+								<div class="col-xs-6 col-sm-6 col-md-6">	    			
+									<div class="form-group">
+										<label>Total Bulletin*</label>
+										<input type="text" name="TotBulletin" id="TotBulletin" class="form-control input-sm" placeholder="Total Bulletin"
+										[(ngModel)]="TotBulletin">
+									</div>
+								</div>
+			    			</div>	
+								 
+                            
+			    		
+			    		</form>
+			    	</div>
+	    		</div>
+    		</div>
+    	</div>
+    </div>
+<button (click)="addBulletin()"  *ngIf="bull.IdBulletin==0" class="btn btn-primary">Ajouter</button>
+<button (click)="updateBulletin()"  *ngIf="bull.IdBulletin!=0" class="btn btn-primary">Modifier</button>

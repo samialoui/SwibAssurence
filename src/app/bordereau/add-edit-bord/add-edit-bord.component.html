@@ -1,0 +1,55 @@
+
+
+<div class="form-group row">
+    <div class="row centered-form">
+    <div class="col-xl-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                    
+                     </div>
+                     <div class="panel-body">
+                    <form class="form-group">
+                        <div class="row">
+                            
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <label >Reference*</label>
+                                    <input type="text" name="Reference" id="Reference" class="form-control input-sm" placeholder="Reference"
+                                    [(ngModel)]="Reference">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <label >Date Envoi*</label>
+                                    <input type="text"
+                                    class="form-control" bsDatepicker [bsConfig]="{containerClass: 'theme-dark-blue'}" placeholder="Date d'envoi"
+                                    [(ngModel)]="DateBordereau">
+                                </div>
+                            </div>
+                            <div class="col-xs-15 col-sm-15 col-md-6">
+                                <div class="form-group">
+                                    <label >Créer Par*</label>
+                                    <input type="text" name="Identite" id="Identite" class="form-control input-sm" placeholder="Créer Par"
+                                    [(ngModel)]="Identite">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <label>DateReponse*</label>
+                                    <input type="text"
+                                    class="form-control" bsDatepicker [bsConfig]="{containerClass: 'theme-dark-blue'}" placeholder="Date de reponse"
+                                    [(ngModel)]="DateReponse">
+                                </div>
+                            </div>
+                        </div>			    			
+                            
+                        
+                    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button (click)="addBordereau()"  *ngIf="bord.IdBordereau==0" class="btn btn-primary">Ajouter</button>
+<button (click)="updateBordereau()"  *ngIf="bord.IdBordereau!=0" class="btn btn-primary">Modifier</button>
